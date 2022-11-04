@@ -42,7 +42,6 @@ import {
   createPromiseCapability,
   PermissionFlag,
   PixelsPerInch,
-  version,
 } from "pdfjs-lib";
 import {
   DEFAULT_SCALE,
@@ -237,13 +236,6 @@ class PDFViewer {
    * @param {PDFViewerOptions} options
    */
   constructor(options) {
-    const viewerVersion =
-      typeof PDFJSDev !== "undefined" ? PDFJSDev.eval("BUNDLE_VERSION") : null;
-    if (version !== viewerVersion) {
-      throw new Error(
-        `The API version "${version}" does not match the Viewer version "${viewerVersion}".`
-      );
-    }
     this.container = options.container;
     this.viewer = options.viewer || options.container.firstElementChild;
 

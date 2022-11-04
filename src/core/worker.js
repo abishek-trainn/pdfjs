@@ -96,17 +96,17 @@ class WorkerMessageHandler {
     const WorkerTasks = [];
     const verbosity = getVerbosityLevel();
 
-    const { docId, apiVersion } = docParams;
-    const workerVersion =
-      typeof PDFJSDev !== "undefined" && !PDFJSDev.test("TESTING")
-        ? PDFJSDev.eval("BUNDLE_VERSION")
-        : null;
-    if (apiVersion !== workerVersion) {
-      throw new Error(
-        `The API version "${apiVersion}" does not match ` +
-          `the Worker version "${workerVersion}".`
-      );
-    }
+    const { docId } = docParams;
+    // const workerVersion =
+    //   typeof PDFJSDev !== "undefined" && !PDFJSDev.test("TESTING")
+    //     ? PDFJSDev.eval("BUNDLE_VERSION")
+    //     : null;
+    // if (apiVersion !== workerVersion) {
+    //   throw new Error(
+    //     `The API version "${apiVersion}" does not match ` +
+    //       `the Worker version "${workerVersion}".`
+    //   );
+    // }
 
     if (typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")) {
       // Fail early, and predictably, rather than having (some) fonts fail to
