@@ -8193,7 +8193,7 @@ class PDFViewer {
   #scrollModePageState = null;
   #onVisibilityChange = null;
   constructor(options) {
-    const viewerVersion = '3.1.17';
+    const viewerVersion = '3.1.18';
     if (_pdfjsLib.version !== viewerVersion) {
       throw new Error(`The API version "${_pdfjsLib.version}" does not match the Viewer version "${viewerVersion}".`);
     }
@@ -13425,8 +13425,8 @@ var _ui_utils = __webpack_require__(1);
 var _app_options = __webpack_require__(2);
 var _pdf_link_service = __webpack_require__(3);
 var _app = __webpack_require__(4);
-const pdfjsVersion = '3.1.17';
-const pdfjsBuild = 'ffcc26ebe';
+const pdfjsVersion = '3.1.18';
+const pdfjsBuild = 'd7b819b72';
 const AppConstants = {
   LinkTarget: _pdf_link_service.LinkTarget,
   RenderingStates: _ui_utils.RenderingStates,
@@ -13573,7 +13573,6 @@ function webViewerLoad() {
   try {
     parent.document.dispatchEvent(event);
   } catch (ex) {
-    console.error(`webviewerloaded: ${ex}`);
     document.dispatchEvent(event);
   }
   _app.PDFViewerApplication.run(config);
