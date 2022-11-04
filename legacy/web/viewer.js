@@ -9275,10 +9275,6 @@ class PDFViewer {
       writable: true,
       value: null
     });
-    const viewerVersion = '3.1.18';
-    if (_pdfjsLib.version !== viewerVersion) {
-      throw new Error(`The API version "${_pdfjsLib.version}" does not match the Viewer version "${viewerVersion}".`);
-    }
     this.container = options.container;
     this.viewer = options.viewer || options.container.firstElementChild;
     if (!(((_this$container = this.container) === null || _this$container === void 0 ? void 0 : _this$container.tagName.toUpperCase()) === "DIV" && ((_this$viewer = this.viewer) === null || _this$viewer === void 0 ? void 0 : _this$viewer.tagName.toUpperCase()) === "DIV")) {
@@ -14724,8 +14720,8 @@ var _app_options = __webpack_require__(2);
 var _pdf_link_service = __webpack_require__(3);
 var _app = __webpack_require__(4);
 var _document$blockUnbloc, _document;
-const pdfjsVersion = '3.1.18';
-const pdfjsBuild = 'd7b819b72';
+const pdfjsVersion = '3.1.19';
+const pdfjsBuild = 'ae783e68a';
 const AppConstants = {
   LinkTarget: _pdf_link_service.LinkTarget,
   RenderingStates: _ui_utils.RenderingStates,
