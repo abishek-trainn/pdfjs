@@ -70,8 +70,8 @@ const COMMON_WEB_FILES = [
 ];
 const MOZCENTRAL_DIFF_FILE = "mozcentral.diff";
 
-const REPO = "git@github.com:mozilla/pdf.js.git";
-const DIST_REPO_URL = "https://github.com/mozilla/pdfjs-dist";
+const REPO = "git@github.com:abishek-trainn/pdfjs.git";
+const DIST_REPO_URL = "https://github.com/abishek-trainn/pdfjs";
 
 const builder = require("./external/builder/builder.js");
 
