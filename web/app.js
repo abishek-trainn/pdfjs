@@ -2118,7 +2118,7 @@ const PDFViewerApplication = {
 if (typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")) {
   const HOSTED_VIEWER_ORIGINS = [
     "null",
-    "http://abishek-trainn.github.io/",
+    "http://abishek-trainn.github.io",
     "https://abishek-trainn.github.io",
   ];
   // eslint-disable-next-line no-var
